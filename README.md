@@ -1,0 +1,1 @@
+This is a repo to store my js code used in deploying services on cloudflare workers. Most of them are modified from its original template and i add userinterface(ui) and interactions myself. ALso there are some for my server like urlrewrite which used for re-write url so no .html suffix is needed.
