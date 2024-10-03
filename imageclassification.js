@@ -130,6 +130,7 @@ export default {
               box-sizing: border-box;
             }
           </style>
+          <link rel="icon" href="https://drigrowpersonal.eu.org/favicon.ico" type="image/x-icon">
         </head>
         <body>
           <header>Image Classifier</header>
