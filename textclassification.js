@@ -45,17 +45,18 @@ function html(inputs, result, score) {
     <html>
     <head>
       <title>Sentiment Analysis</title>
+      <link rel="icon" href="https://drigrowpersonal.eu.org/favicon.ico" type="image/x-icon">
       <style>
         body { font-family: Arial, sans-serif; margin: 40px; }
-        input[type="text"] { width: 300px; padding: 8px; }
-        button { padding: 8px 12px; margin-left: 10px; }
+        textarea { width: 100%; height: 100px; padding: 8px; resize: vertical; } /* Allows vertical resizing */
+        button { padding: 8px 12px; margin-top: 10px; }
         .result { margin-top: 20px; }
       </style>
     </head>
     <body>
       <h1>Sentiment Analysis</h1>
       <form method="POST">
-        <input type="text" name="text" placeholder="Enter text here" value="${inputs.text}">
+        <textarea name="text" placeholder="Enter text here">${inputs.text}</textarea>
         <button type="submit">Check</button>
       </form>
       <div class="result">
