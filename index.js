@@ -16,6 +16,7 @@ export default {
           <meta charset="UTF-8">
           <meta name="viewport" content="width=device-width, initial-scale=1.0">
           <title>Speech to Text</title>
+          <link rel="icon" href="https://drigrowpersonal.eu.org/favicon.ico" type="image/x-icon">
       </head>
       <body>
           <h1>Speech to Text</h1>
