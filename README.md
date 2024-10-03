@@ -1,7 +1,9 @@
 INTRO:
 This is a repo to store my js code used in deploying services on cloudflare workers. Most of them are modified from its original template and i add userinterface(ui) and interactions myself. ALso there are some for my server like urlrewrite which used for re-write url so no .html suffix is needed.
+
 NOTICE:
 Although no license is selected for this repo, it's me lazy that don't wanna read the license and choose for one. You feel free to use any of the code in this repo but not for commercial use (you can generate similar code using cloudflare template w/microsoft copilot). 
+
 HOW TO USE:
 Simply create a worker in cloudflare dashboard and copy the js file by "edit code" choice shown on project deployed page. You can create a template worker script and the copy mine into it too, then the file name will match(index.js instead of worker.js).
 
