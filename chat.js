@@ -7,6 +7,7 @@ export default {
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>AI Chat</title>
+        <link rel="icon" href="https://drigrowpersonal.eu.org/favicon.ico" type="image/x-icon">
         <style>
           body { font-family: Arial, sans-serif; background-color: #f0f8ff; color: #333; padding: 20px; display: flex; flex-direction: column; align-items: center; }
           .container { max-width: 600px; width: 100%; }
