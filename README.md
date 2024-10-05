@@ -4,7 +4,7 @@ This is a repo to store my js code used in deploying services on cloudflare work
 
 NOTICE:
 
-Although no license is selected for this repo, it's me lazy that don't wanna read the license and choose for one. You feel free to use any of the code in this repo but not for commercial use (you can generate similar code using cloudflare template w/microsoft copilot). 
+You feel free to use or modify any of the code in this repo but not for commercial use (you can generate similar code using cloudflare template w/microsoft copilot). 
 
 HOW TO USE:
 
