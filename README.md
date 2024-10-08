@@ -10,7 +10,7 @@ HOW TO USE:
 
 Simply create a worker in cloudflare dashboard and copy the js file by "edit code" choice shown on project deployed page. You can create a template worker script and the copy mine into it too, then the file name will match(index.js instead of worker.js).
 
-p.s. Some of the files have <link rel="icon" href="https://drigrowpersonal.eu.org/favicon.ico" type="image/x-icon"> in html zone that its my icon, if you'd like to clear it, delete the <link> lable.
+p.s. Some of the files have "<link rel="icon" href="https://drigrowpersonal.eu.org/favicon.ico" type="image/x-icon">" in html zone that its my icon, if you'd like to clear it, delete the "<link>" lable.
 
 contact me at:
 [Drigrow@bilibili](https://space.bilibili.com/652661680) or formal@drigrowpersonal.eu.org
