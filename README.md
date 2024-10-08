@@ -20,7 +20,7 @@ To use the repository with Cloudflare Workers, follow these steps:
 
 *Deploy*: Click the Deploy button in the top right corner to apply the changes. The worker is now live and you can further add a custom domain to make use of cloudflare cdn..
 
-For more detailed guidance, refer to Guide-CN.
+For more detailed guidance, refer to [*Guide-EN*](https://drigrowpersonal.eu.org/github-repo-guide) or [*Guide-CN*](https://www.bilibili.com/read/cv39299108).
 
 p.s. Some of the files have \<link rel="icon" href="https://drigrowpersonal.eu.org/favicon.ico" type="image/x-icon"\> in html zone that its my icon, if you'd like to clear it, delete the \<link\> lable.
 
