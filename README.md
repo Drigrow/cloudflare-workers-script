@@ -1,5 +1,7 @@
 # Welcome to Drigrow's repository
 
+English version | [中文](https://github.com/Drigrow/cloudflare-workers-script/blob/main/README-CN.md)
+
 **INTRO:**
 
 This is a repo to store my js code used in deploying services on cloudflare workers. Most of them are modified from its original template and i add userinterface(ui) and interactions myself. ALso there are some for my server like urlrewrite which used for re-write url so no .html suffix is needed.
