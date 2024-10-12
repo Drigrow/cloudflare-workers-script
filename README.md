@@ -24,7 +24,7 @@ To use the repository with Cloudflare Workers, follow these steps:
 
 For more detailed guidance, refer to [*Guide-EN*](https://drigrowpersonal.eu.org/github-repo-guide) or [*Guide-CN*](https://www.bilibili.com/read/cv39299108).
 
-p.s. Some of the files have \<link rel="icon" href="https://drigrowpersonal.eu.org/favicon.ico" type="image/x-icon"\> in html zone that its my icon, if you'd like to clear it, delete the \<link\> lable.
+p.s. Some of the files have `<link rel="icon" href="https://drigrowpersonal.eu.org/favicon.ico" type="image/x-icon">` in html zone that its my icon, if you'd like to clear it, delete the `<link>` lable.
 
 contact me at:
 [Drigrow@bilibili](https://space.bilibili.com/652661680) or formal@drigrowpersonal.eu.org
