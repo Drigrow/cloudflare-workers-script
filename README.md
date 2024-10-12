@@ -1,4 +1,4 @@
-**Welcome to Drigrow's repository**
+# Welcome to Drigrow's repository
 
 **INTRO:**
 
@@ -12,13 +12,13 @@ You feel free to use or modify any of the code in this repo but not for commerci
 
 To use the repository with Cloudflare Workers, follow these steps:
 
-*Create a Worker in Cloudflare Dashboard*: Log into your Cloudflare account and navigate to Workers & Pages. Click Create Worker to deploy a basic worker script.
+- *Create a Worker in Cloudflare Dashboard*: Log into your Cloudflare account and navigate to Workers & Pages. Click Create Worker to deploy a basic worker script.
 
-*Edit Code*: Once the worker is deployed, click Edit Code on the worker's dashboard page. This will open Cloudflare's online code editor.
+- *Edit Code*: Once the worker is deployed, click Edit Code on the worker's dashboard page. This will open Cloudflare's online code editor.
 
-*Replace the Script*: Open the desired JavaScript file from this repository (e.g., chat.js, or any other relevant file) and copy its content. Go back to the Cloudflare editor, remove the existing template code, and paste the copied script.
+- *Replace the Script*: Open the desired JavaScript file from this repository (e.g., chat.js, or any other file) and copy its content. Go back to the Cloudflare editor, remove the existing template code, and paste the copied script.
 
-*Deploy*: Click the Deploy button in the top right corner to apply the changes. The worker is now live and you can further add a custom domain to make use of cloudflare cdn..
+- *Deploy*: Click the Deploy button in the top right corner to apply the changes. The worker is now live, and you can further enhance accessibility by adding a custom domain. This allows you to access your service using your own domain and leverage Cloudflare CDN for efficient distribution.
 
 For more detailed guidance, refer to [*Guide-EN*](https://drigrowpersonal.eu.org/github-repo-guide) or [*Guide-CN*](https://www.bilibili.com/read/cv39299108).
 
