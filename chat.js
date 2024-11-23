@@ -63,6 +63,7 @@ export default {
         <script>
           let isResponding = false;
           let mode = 'balanced';
+          let chatHistory = [{ role: 'system', content: 'You are a helpful assistant.' }];
 
           document.getElementById('sendButton').addEventListener('click', sendMessage);
           document.getElementById('userInput').addEventListener('input', () => {
@@ -102,11 +103,24 @@ export default {
             document.getElementById('userInput').value = '';
             adjustTextareaHeight();
 
+            // Add the user's message to the chat history
+            chatHistory.push({ role: 'user', content: userInput });
+
             const loading = document.createElement('div');
             loading.className = 'message ai loading';
             loading.innerHTML = 'AI is generating<span>.</span><span>.</span><span>.</span>';
             chatbox.appendChild(loading);
             chatbox.scrollTop = chatbox.scrollHeight;
+
+            // Ensure system message is always present and at the beginning
+            if (chatHistory[0].role !== 'system') {
+              chatHistory.unshift({ role: 'system', content: 'You are a helpful assistant.' });
+            }
+
+            // Limit the history to 8 messages (7 user/assistant messages + 1 system message)
+            while (chatHistory.length > 8) {
+              chatHistory.shift(); // Remove oldest message if history exceeds 8
+            }
 
             let systemContent = 'You are a helpful assistant.';
             if (mode === 'creative') {
@@ -119,10 +133,10 @@ export default {
               systemContent = 'Respond in Simplified Chinese with a focus on advanced language usage, including idiomatic expressions and cultural references. Ensure proper readability with a clear, logical structure, adjusting the length for clarity. If the user asks "shortly," reply with a much briefer, summarized version while retaining precision.Avoid using emojis but emoticons are okay.';
             }
 
-            const messages = [
-              { role: 'system', content: systemContent },
-              { role: 'user', content: userInput }
-            ];
+            // Update the system message content based on the mode
+            chatHistory[0].content = systemContent;
+
+            const messages = chatHistory;
 
             let response = await fetch('/chat', {
               method: 'POST',
@@ -135,7 +149,7 @@ export default {
             let shortlyCount = 0;
 
             while (!/[.!?。！？]$/.test(data.response.response.trim().replace(/["“”]/g, '')) && !emojiRegex.test(data.response.response.trim().slice(-1)) && shortlyCount < 3) {
-              messages[1].content += ', shortly';
+              messages[messages.length - 1].content += ', shortly';
               response = await fetch('/chat', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
@@ -151,12 +165,16 @@ export default {
             message.innerHTML = data.response.response.replace(/\\n/g, '<br>');
             chatbox.appendChild(message);
             chatbox.scrollTop = chatbox.scrollHeight;
+
+            // Add AI's response to the chat history
+            chatHistory.push({ role: 'assistant', content: data.response.response });
+
             isResponding = false;
             document.getElementById('sendButton').disabled = false;
           }
         </script>
         <br>
-      <footer>External site: <a href="https://drigrowpersonal.eu.org">What's my IP adress?</a></footer>
+        <footer>External site: <a href="https://drigrowpersonal.eu.org">What's my IP address?</a></footer>
       </body>
       </html>
     `;
@@ -167,6 +185,10 @@ export default {
       });
     } else if (request.method === 'POST' && request.url.endsWith('/chat')) {
       const { messages } = await request.json();
+      // Here you should check if messages array is within the limit or truncate it
+      if (messages.length > 10) {
+        messages = messages.slice(-10); // Keep only the last 10 messages
+      }
       const response = await env.AI.run('@cf/meta/llama-3-8b-instruct', { messages });
       return new Response(JSON.stringify({ response }), {
         headers: { 'content-type': 'application/json' },
