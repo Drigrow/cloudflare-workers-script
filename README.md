@@ -26,5 +26,11 @@ For more detailed guidance, refer to [*Guide-EN*](https://drigrowpersonal.eu.org
 
 p.s. Some of the files have `<link rel="icon" href="https://drigrowpersonal.eu.org/favicon.ico" type="image/x-icon">` in html zone that its my icon, if you'd like to clear it, delete the `<link>` lable.
 
+p.p.s. On 7/2025 I found it not working on cf Workers platform and I got why. Now cf require user to bind AI to current worker. Here's how:
+
+- Open your Workers webpage and select the project. -> Select `Bindings` -> Click `Add Bindings` and add Worker AI with name `AI` -> Finish
+
+
+
 contact me at:
 [Drigrow@bilibili](https://space.bilibili.com/652661680) or formal@drigrowpersonal.eu.org
